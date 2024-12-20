@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAJAR Js</title>
+    <script>
+        let mhs = {
+            nama = "ahmat taupik"
+            umur = 50,
+            prodi = {
+                kode = "TI"
+                nama = "Teknik Informatika"
+            },
+            ipk : 3,8
+            grade : function(){
+                if (this.ipk >= 3,5)  
+
+            }
+        }
+        function cetak(){
+            let area_nf = document.getElementById("nf");
+            area_nf.innerHTML = "nama mahasiswa " + mhs.nama;
+            area_nf.innerHTML = area_nf.innerHTML + "<br>usia :" + mhs.umur;
+            area_nf.innerHTML = area_nf.innerHTML + "<br>prodi :" + mhs.umur.prodi,
+        }
+    </script>
+</head>
+<body onload="cetak()">
+    <div id="nf">
+
+    </div>
+    
+</body>
+</html>

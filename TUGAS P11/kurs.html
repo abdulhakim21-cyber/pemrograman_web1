@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+    <link rel="stylesheet" href="gayaUang.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Konversi Mata Uang ke Rupiah</h1>
+        <form id="currency-form">
+            <div class="form-group">
+                <label for="amount">Jumlah Mata Uang Asing:</label>
+                <input type="number" id="amount" name="amount" placeholder="Masukkan jumlah" required>
+            </div>
+            <div class="form-group">
+                <label for="currency">Pilih Mata Uang:</label>
+                <select id="currency" name="currency" required>
+                    <option value="" disabled selected>Pilih Mata Uang</option>
+                    <option value="usd">Dollar US (USD)</option>
+                    <option value="sgd">Dollar Singapore (SGD)</option>
+                    <option value="myr">Ringgit Malaysia (MYR)</option>
+                    <option value="jpy">Yen Jepang (JPY)</option>
+                    <option value="eur">Euro (EUR)</option>
+                    <option value="sar">Riyal Arab Saudi (SAR)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rupiah">Nilai dalam Rupiah:</label>
+                <input type="text" id="rupiah" name="rupiah" readonly>
+            </div>
+            <button type="button" onclick="convertCurrency()">Konversi</button>
+        </form>
+    </div>
+
+    <script src="duit.js"></script>
+</body>
+</html>

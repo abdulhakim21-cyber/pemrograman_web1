@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .invalid {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validasi</h1>
+    <form id="ticketForm">
+        <div>
+            <label for="namaPelanggan">Nama Pelanggan:</label>
+            <input type="text" id="namaPelanggan" name="namaPelanggan" maxlength="30">
+            <span id="errorNama" class="error"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="errorEmail" class="error"></span>
+        </div>
+        <div>
+            <label for="jamKeberangkatan">Jam Keberangkatan:</label>
+            <input type="text" id="jamKeberangkatan" name="jamKeberangkatan" placeholder="HH.MM">
+            <span id="errorJam" class="error"></span>
+        </div>
+        <div>
+            <label for="tujuan">Tujuan Keberangkatan:</label>
+            <input type="text" id="tujuan" name="tujuan">
+            <span id="errorTujuan" class="error"></span>
+        </div>
+        <div>
+            <label for="jumlahTiket">Jumlah Tiket:</label>
+            <input type="number" id="jumlahTiket" name="jumlahTiket" min="1" max="10">
+            <span id="errorJumlah" class="error"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Data yang Valid:</h2>
+    <div id="validData"></div>
+
+    <script>
+        document.getElementById('ticketForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Reset error messages and styles
+            const errorMessages = document.querySelectorAll('.error');
+            errorMessages.forEach(error => error.textContent = '');
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => input.classList.remove('invalid'));
+
+            let isValid = true;
+
+            // Nama Pelanggan validation
+            const nama = document.getElementById('namaPelanggan');
+            if (nama.value.trim() === '' || nama.value.length > 30) {
+                document.getElementById('errorNama').textContent = 'Nama wajib diisi (maks. 30 karakter)';
+                nama.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('errorEmail').textContent = 'Format email tidak valid';
+                email.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Jam Keberangkatan validation
+            const jam = document.getElementById('jamKeberangkatan');
+            const jamRegex = /^([01]?[0-9]|2[0-3])\.[0-5][0-9]$/;
+            if (!jamRegex.test(jam.value)) {
+                document.getElementById('errorJam').textContent = 'Format jam tidak valid (HH.MM)';
+                jam.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Tujuan Keberangkatan validation
+            const tujuan = document.getElementById('tujuan');
+            if (tujuan.value.trim() === '') {
+                document.getElementById('errorTujuan').textContent = 'Tujuan wajib diisi';
+                tujuan.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Jumlah Tiket validation
+            const jumlah = document.getElementById('jumlahTiket');
+            if (jumlah.value < 1 || jumlah.value > 10 || jumlah.value.trim() === '') {
+                document.getElementById('errorJumlah').textContent = 'Jumlah tiket harus antara 1-10';
+                jumlah.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Display valid data
+            if (isValid) {
+                const validData = `
+                    <p><strong>Nama Pelanggan:</strong> ${nama.value}</p>
+                    <p><strong>Email:</strong> ${email.value}</p>
+                    <p><strong>Jam Keberangkatan:</strong> ${jam.value}</p>
+                    <p><strong>Tujuan Keberangkatan:</strong> ${tujuan.value}</p>
+                    <p><strong>Jumlah Tiket:</strong> ${jumlah.value}</p>
+                `;
+                document.getElementById('validData').innerHTML = validData;
+            }
+        });
+    </script>
+</body>
+</html>

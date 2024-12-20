@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let jagoan = {
+            nama : "Goku",
+            power : 10000,
+            makan : function(kalori){
+                this.power = this.power + kalori;
+            },
+            pukul : function(kekuatan, target){
+                this.power = this.power - kekuatan;
+                target.power = target.power - kekuatan;
+            }
+        }
+        let musuh = {
+            nama : "topik",
+            power : 5000
+        }
+
+        function run(){
+            console.log("jagoan bernama" + jagoan.nama + " kekuatan " + jagoan.power);
+            console.log("musuh bernama" + musuh.nama + " kekuatan " + musuh.power);
+
+            
+        }
+    </script>
+</head>
+<body onclick="run()">
+    <div id="nf"></div>
+    
+</body>
+</html>

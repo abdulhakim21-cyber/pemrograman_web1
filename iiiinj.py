@@ -1,0 +1,1 @@
+print int("5") + float("2.5")

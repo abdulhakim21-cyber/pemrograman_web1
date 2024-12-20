@@ -1,0 +1,37 @@
+.box {
+    width: 700px;
+    height: 200px;
+    background-color: rgb(100, 171, 199);
+    margin: 10px;
+    float: right;
+}
+.box-1 {
+    background-image: url(../img/burung1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box-2 {
+    background-image: url(../img/burung2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box-3 {
+    background-image: url(../img/burung4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box-4 {
+    background-image: url(../img/burung5.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+img {
+    height: 150px;
+    margin: 10px;
+}

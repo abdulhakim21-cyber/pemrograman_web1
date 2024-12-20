@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Js</title>
+    <script>
+        function otentikasi(){
+            const admin = "kims2121";
+            const passadmin = "hakims111";
+
+            let uname = document.getElementById("username").value;
+            let pass = document.getElementById("pass").value;
+            
+            if(uname == admin && pass == passadmin){
+                alert("Sukses Login");
+                return true;
+            }else{
+                alert("Gagal Login");
+                //window.location.href= ""
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="post">
+        Username : <input type="text" name="username" id="username">
+        <br>
+        Password : <input type="text" name="password" id="password">
+        <br>
+        <input type="submit" value="Login" onclick="otentikasi()">
+    </form>
+</body>
+</html>

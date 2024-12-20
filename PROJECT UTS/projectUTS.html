@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project uts ABDUL HAKIM</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="gayakim.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="kims">HAKIMS CARS</h1>
+        <div class="nav-menu">
+            <p><a>Home</a></p>
+            <p><a href="menu.html">Menu</a></p>
+            <p><a href="profile.html">Profile</a></p>
+            <p><a href="articles.html">Articles</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            <img src="IMG/instagram.jpg" alt="Instagram">
+            <img src="IMG/twitter.jpg" alt="Twitter">
+            <img src="IMG/linkdin.jpg" alt="LinkedIn">
+            <div>
+                <button class="log">
+                    <a href="fomrlogin.html">Login</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>JUAL BELI MOBIL BARU & BEKAS</h1>
+            <p>TERSEDIA BANYAK MOBIL SPORT SECOND</p>
+            <h4 class="h4">Kami menawarkan mobil dengan kondisi
+                 terbaik untuk memenuhi kebutuhan Anda.
+                  Setiap unit yang tersedia telah melalui
+                   proses pemeriksaan menyeluruh untuk memastikan
+                    performa, kenyamanan, dan keamanan saat digunakan.</h4>
+        </div>
+        <img src="img/me2.jpg" alt="Hero">
+    </section>
+
+    <section class="descript">
+        <div>
+            <div>
+                <h2 class="huruf">Lamborghini</h2>
+                <p class="ppp">Semua mobil di sini sudah melalui proses pengecekan menyeluruh luar dalam 
+                    jadi kondisi mobil sudah di pastikan mulus dan siap pakai
+                </p>
+            </div>
+            <div class="price">
+                <p class="k7000">7.000.000.000</p>
+            </div>
+        </div>
+        <img src="img/mobil1.png" alt="Mobil">
+    </section>
+
+    <section class="descript2">
+        <div class="card">
+            <img src="IMG/mobil3.webp" alt="Card Image 1">
+            <div class="card-body">
+                <h3>BMW Z4</h3>
+                <p>                    
+                    BMW Z4 tahun 2023 kondisi mulus interior rapih terawat 
+                    mesin sehat dan rutin service kaki-kaki empuk surat lengkap 
+                    semua aman dan siap pakai kondisi mobil 99% second rasa baru
+                </p>
+            </div>
+            <div class="card-footer">
+                <p>2023</p>
+                <p>8.300.000.000</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="IMG/mobil4.webp" alt="Card Image 2">
+            <div class="card-body">
+                <h3>FERRARI GTS</h3>
+                <p>                   
+                    FERRARI tahun 2022 kondisi mulus interior rapih terawat 
+                    mesin sehat dan rutin service kaki-kaki empuk surat lengkap 
+                    semua aman dan siap pakai kondisi mobil 95% second rasa baru
+                </p>
+            </div>
+            <div class="card-footer">
+                <p>2022</p>
+                <p>9.000.000.000</p>
+            </div>
+        </div>
+
+            <div class="card">
+            <img src="IMG/mobil5.webp" alt="Card Image 3">
+            <div class="card-body">
+                <h3>ROLL ROYS</h3>
+                <p>
+                    ROLL ROYS tahun 2021 kondisi mulus interior rapih terawat 
+                    mesin sehat dan rutin service kaki-kaki empuk surat lengkap 
+                    semua aman dan siap pakai kondisi mobil 98% second rasa baru
+                </p>
+            </div>
+            <div class="card-footer">
+                <p>2021</p>
+                <p>20.000.000.000</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="IMG/mobil2.webp" alt="Card Image 4">
+            <div class="card-body">
+                <h3>LAMBORGHINI</h3>
+                <p>
+                    Lamborghini tahun 2020 kondisi mulus interior rapih terawat 
+                    mesin sehat dan rutin service kaki-kaki empuk surat lengkap 
+                    semua aman dan siap pakai kondisi mobil 90% second rasa baru
+                </p>
+            </div>
+            <div class="card-footer">
+                <p>2020</p>
+                <p>7.500.000.000</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <div class="container">
+        <h2>Form Pemesanan</h2>
+        <form id="pemesananForm">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+            <label for="tipe">Tipe Mobil</label>
+            <select id="tipe" name="tipe" required>
+                <option value="">Pilih Tipe Mobil</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="BMW">BMW</option>
+                <option value="Roll Roys">Roll Roys</option>
+                <option value="Cumi darat">Cumi darat</option>
+            </select>
+
+            <button type="submit">Beli Sekarang</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('pemesananForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const tipe = document.getElementById('tipe').value;
+
+            alert(`Terima kasih, ${nama}! Anda telah memesan ${tipe}.`);
+        });
+    </script>
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>© Copyright MyWebsite. ABDUL HAKIM</p>
+        <p>Designed by <a href="#" target="_blank">ABDUL HAKIM</a></p>
+    </div>
+    <div class="footer-icons">
+        <a href="https://www.instagram.com/abdlhakim_21/profilecard/?igsh=MTh4Z3lrd2IycmFxYw==" class="icon" target="_blank" rel="noopener noreferrer">
+            <img src="IMG/instagram.jpg" alt="Instagram Icon">
+        </a>
+        <a href="https://www.linkedin.com/in/abdul-hakim-03b71332b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon" target="_blank" rel="noopener noreferrer">
+            <img src="IMG/linkdin.jpg" alt="LinkedIn Icon">
+        </a>
+        <a href="https://youtube.com/@abdulhakim-wj6gl?si=o4Wa405LiECX21no" class="icon" target="_blank" rel="noopener noreferrer">
+            <img src="IMG/youtube.png" alt="YouTube Icon">
+        </a>
+        </a>
+    </div>
+    
+    <a href="#" class="scroll-to-top">↑</a>
+</footer>
+
+
+</body>
+
+</html>

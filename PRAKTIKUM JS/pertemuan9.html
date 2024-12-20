@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaScript</title>
+</head>
+<body>
+    <h1>Form Perhitungan luas dan Keliling Lingkaran</h1>
+    <input type="number" id="jari" placeholder="Masukan jari jari">
+    <button onclick="hitungLingkaran()">Hitung!</button>
+    <p>Luas Lingkaran : <span id="LuasLingkaran">0</span></p>  
+    <p>Keliling Lingkaran : <span id="KelilingLingkaran">0</span></p>  
+    <script>
+        let nama = "Abdul Hakim";
+        console.log(nama);
+
+        function hitungLingkaran() {
+            let jari_jari = document.getElementById("jari").value;
+            console.log(jari_jari);
+            const phi = 3.14;
+
+            let luas = phi * (jari_jari ** 2);
+            console.log("Luas Lingkaran:", luas);
+
+            let keliling = 2 * phi * jari_jari;
+            console.log("Keliling Lingkaran:", keliling);
+                
+            document.getElementById("LuasLingkaran").innerHTML = luas;
+            document.getElementById("KelilingLingkaran").innerHTML = keliling;
+        }
+    </script>
+</body>
+</html>
